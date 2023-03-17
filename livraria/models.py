@@ -26,7 +26,7 @@ class Autor(models.Model):
             Verbose_name_plural("Autores")
 
 
-class Livros (models.Model):
+class Livro (models.Model):
     titulo = models.CharField (max_length = 255)
     isbn = models.CharField (max_length = 32, null = True, blank = True)
     qtd = models.IntegerField (default = 0, null = True, blank = True)
