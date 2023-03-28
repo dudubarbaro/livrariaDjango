@@ -22,8 +22,8 @@ class Autor(models.Model):
 
     def __str__(self):
         return self.nome_autor
-        class Meta:
-            verbose_name_plural = "Autores"
+    class Meta:
+        verbose_name_plural = "Autores"
 
 
 class Livro (models.Model):
