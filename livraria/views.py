@@ -1,10 +1,10 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 
-from rest_framework.viewsets import ModelVielSet
+from rest_framework.viewsets import ModelViewSet
 
 from livraria.models import Categoria
-from livraria.serializers import CategoriaSerializers
+from livraria.serializers import CategoriaSerializer
 
-class CategoriaSerializers(ModelVielSet):
+class CategoriaViewSet(ModelViewSet):
     queryset = Categoria.objects.all()
-    serializers_class = CategoriaSerializers
+    serializer_class = CategoriaSerializer
