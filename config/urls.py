@@ -6,7 +6,7 @@ from rest_framework.routers import DefaultRouter
 from livraria.views import CategoriaViewSet, EditoraViewSet
 
 router = DefaultRouter()
-router.register (r"categoria", CategoriaViewSet)
+router.register (r"categorias", CategoriaViewSet)
 router.register (r"editoras", EditoraViewSet)
 
 urlpatterns = [
