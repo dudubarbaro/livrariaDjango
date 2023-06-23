@@ -1,5 +1,7 @@
 from rest_framework.viewsets import ModelViewSet
 
+from rest_framework.permissions import IsAuthenticated
+
 from livraria.models import Categoria, Editora, Autor, Livro
 from livraria.serializers import CategoriaSerializer, EditoraSerializer, AutorSerializer, LivroSerializer, LivroDetailSerializer
 
@@ -7,6 +9,7 @@ from livraria.serializers import CategoriaSerializer, EditoraSerializer, AutorSe
 class CategoriaViewSet(ModelViewSet):
     queryset = Categoria.objects.all()
     serializer_class = CategoriaSerializer
+    permission_classes = [IsAuthenticated]
 
 
 class EditoraViewSet(ModelViewSet):
@@ -17,6 +20,7 @@ class EditoraViewSet(ModelViewSet):
 class AutorViewSet(ModelViewSet):
     queryset = Autor.objects.all()
     serializer_class = AutorSerializer
+    permission_classes = [IsAuthenticated]
 
 
 class LivroViewSet(ModelViewSet):
